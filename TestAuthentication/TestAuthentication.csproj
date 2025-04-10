@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <Description>
-     Test Authentication Scheme for API testing where Authorization is enabled.
+     Test Authentication Scheme for ASP.NET API testing where Authorization is enabled.
     </Description>
   </PropertyGroup>
   <ItemGroup>
