@@ -18,8 +18,8 @@
   
   <PropertyGroup  Label="nuget">
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <RepositoryUrl>https://github.com/xavierjohn/FunctionalDDD.git</RepositoryUrl>
-    <PackageProjectUrl>https://xavierjohn.github.io/FunctionalDDD/</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/xavierjohn/TestAuthentication.git</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/xavierjohn/TestAuthentication</PackageProjectUrl>
   </PropertyGroup>
   
   <PropertyGroup  Label="Build">
