@@ -21,11 +21,11 @@ public class WeatherForecastTests(TestWebApplicationFactory<Program> factory)
             .CreateClient();
 
         // Act
-        var response = await client.GetAsync("WeatherForecast");
+        var response = await client.GetAsync("WeatherForecast", TestContext.Current.CancellationToken);
 
         // Assert
         response.EnsureSuccessStatusCode(); // Status Code 200-299
-        var weather = await response.Content.ReadAsStringAsync();
+        var weather = await response.Content.ReadAsStringAsync(TestContext.Current.CancellationToken);
         Assert.Contains("temperatureF", weather);
     }
 
@@ -40,7 +40,7 @@ public class WeatherForecastTests(TestWebApplicationFactory<Program> factory)
             .CreateClient();
 
         // Act
-        var response = await client.GetAsync("WeatherForecast");
+        var response = await client.GetAsync("WeatherForecast", TestContext.Current.CancellationToken);
 
         // Assert
         Assert.Equal(StatusCodes.Status403Forbidden, (int)response.StatusCode);
@@ -54,7 +54,7 @@ public class WeatherForecastTests(TestWebApplicationFactory<Program> factory)
             .CreateClient();
 
         // Act
-        var response = await client.GetAsync("WeatherForecast");
+        var response = await client.GetAsync("WeatherForecast", TestContext.Current.CancellationToken);
 
         // Assert
         Assert.Equal(StatusCodes.Status401Unauthorized, (int)response.StatusCode);
