@@ -5,10 +5,10 @@ using Microsoft.AspNetCore.Http;
 using TestAuthentication;
 using Xunit;
 
-[Collection("API collection")]
-public class WeatherForecastTests(TestWebApplicationFactory<Program> factory)
+[Collection(ApiCollectionFixture.Id)]
+public class WeatherForecastTests(TestAuthenticationWebApplicationFactory<Program> factory)
 {
-    private readonly TestWebApplicationFactory<Program> _factory = factory;
+    private readonly TestAuthenticationWebApplicationFactory<Program> _factory = factory;
 
     [Fact]
     public async Task Authorized_user_with_access_as_user_scope_can_get_the_forecast()

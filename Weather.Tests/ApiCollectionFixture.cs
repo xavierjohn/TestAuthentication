@@ -1,7 +1,8 @@
 ﻿namespace Weather.Tests;
 using TestAuthentication;
 
-[CollectionDefinition("API collection")]
-public class ApiCollectionFixture : ICollectionFixture<TestWebApplicationFactory<Program>>
+[CollectionDefinition(Id)]
+public class ApiCollectionFixture : ICollectionFixture<TestAuthenticationWebApplicationFactory<Program>>
 {
+    public const string Id = "Test web application factory fixture collection";
 }

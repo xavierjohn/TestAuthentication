@@ -5,7 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using System.Collections.Generic;
 using System.Security.Claims;
 
-public class TestWebApplicationFactory<TEntryPoint> : WebApplicationFactory<TEntryPoint> where TEntryPoint : class
+public class TestAuthenticationWebApplicationFactory<TEntryPoint> : WebApplicationFactory<TEntryPoint> where TEntryPoint : class
 {
     public WebApplicationFactory<TEntryPoint> WithTestSchemeAuth(IReadOnlyList<Claim> claims)
     {
